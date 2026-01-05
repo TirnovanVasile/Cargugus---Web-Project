@@ -1,0 +1,368 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-blue: #0f172a;
+    --accent-orange: #ff6b00;
+    --light-gray: #f3f4f6;
+    --white: #ffffff;
+    --text-dark: #1f2937;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navigation --- */
+nav {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* Am scos stilurile de text (font-size, color) pentru că nu mai avem text */
+}
+
+.logo-img {
+    height: 100px;  /* MODIFICAT: Era 60px, acum e mult mai mare */
+    width: auto;    /* Păstrează proporțiile corecte */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05); /* Logo-ul se mărește puțin când pui mouse-ul pe el */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-orange);
+}
+
+/* --- Hero Section --- */
+.hero {
+    /* AICI S-A MODIFICAT CALEA */
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('img/hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent-orange);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e65100;
+    transform: translateY(-2px);
+}
+
+/* --- Tracking Section --- */
+.tracking-bar {
+    background: var(--white);
+    padding: 2rem;
+    margin: -3rem auto 2rem;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.tracking-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#tracking-result {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+/* --- Services Grid --- */
+.container {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-blue);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    border-top: 4px solid var(--accent-orange);
+    display: flex;
+    flex-direction: column;
+}
+
+/* NOU: Stil pentru imaginile din carduri */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+.card p {
+    flex-grow: 1;
+}
+
+/* --- Pricing Table --- */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.price-table th, .price-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-table th {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+/* --- Contact Form --- */
+.contact-wrapper {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* --- Footer --- */
+/* --- Footer Actualizat --- */
+footer {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding-top: 3rem; /* Mai mult spațiu sus */
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuie spațiul egal */
+    padding: 0 2rem 2rem;
+}
+
+.footer-section {
+    margin-bottom: 1.5rem;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: var(--accent-orange); /* Titlurile portocalii */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #cbd5e1; /* Un gri deschis pentru text */
+}
+
+/* Stil pentru link-ul de email */
+.footer-link {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.footer-link:hover {
+    color: var(--accent-orange);
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background: #0b1120; /* O nuanță puțin mai închisă */
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero h1 { font-size: 2rem; }
+    .tracking-bar { flex-direction: column; width: 90%; }
+    .contact-wrapper { flex-direction: column; }
+}
+/* --- About Section (Despre Noi) --- */
+.about-section {
+    background-color: var(--white); /* Fundal alb pentru contrast */
+    padding: 5rem 0;
+    margin-top: 2rem;
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center; /* Centrează vertical textul cu imaginea */
+    gap: 4rem; /* Spațiu între text și poză */
+}
+
+.about-text {
+    flex: 1; /* Ocupă jumătate din spațiu */
+}
+
+.about-text h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    position: relative;
+}
+
+/* O mică linie portocalie sub titlu pentru stil */
+.about-text h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-orange);
+    margin-top: 10px;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1; /* Ocupă cealaltă jumătate */
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Umbră elegantă */
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Update Media Query pentru mobil */
+@media (max-width: 768px) {
+    .about-wrapper {
+        flex-direction: column; /* Pe mobil le punem una sub alta */
+        text-align: center;
+    }
+    .about-text h2::after {
+        margin: 10px auto; /* Centrează linia portocalie pe mobil */
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargugus - Curierat Rapid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="img/logo.png" alt="Cargugus Logo" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="home.html" class="active">Acasă</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="preturi.html">Prețuri</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Livrare rapidă oriunde în țară</h1>
+            <p>Partenerul tău de încredere pentru logistică și curierat.</p>
+            <br>
+            <a href="servicii.html" class="btn">Vezi Serviciile</a>
+        </div>
+    </header>
+
+    <section class="tracking-bar">
+        <input type="text" id="awbInput" placeholder="Introdu numărul AWB (ex: 12345)">
+        <button class="btn" onclick="trackPackage()">Urmărește Colet</button>
+    </section>
+    <div style="text-align: center; padding-bottom: 2rem;" id="tracking-result"></div>
+
+    <section class="about-section">
+        <div class="container"> <div class="about-wrapper">
+                
+                <div class="about-text">
+                    <h2>Cine suntem noi?</h2>
+                    <p>
+                        Povestea <strong>Cargugus</strong> a început din dorința de a conecta oamenii și afacerile prin servicii de curierat rapide, sigure și transparente.
+                    </p>
+                    <p>
+                        Cu o experiență vastă în logistică și o flotă modernă, ne asigurăm că fiecare colet ajunge la destinație în timp record. Fie că este vorba de un simplu plic sau de marfă paletizată, tratăm fiecare livrare cu maximă seriozitate.
+                    </p>
+                    <p>
+                        Suntem mai mult decât o firmă de curierat – suntem partenerul tău de încredere în mișcare.
+                    </p>
+                    <a href="contact.html" class="btn">Contactează-ne</a>
+                </div>
+
+                <div class="about-image">
+                    <img src="img/depozit.png" alt="Depozit Logistic Cargugus">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">De ce Cargugus?</h2>
+        <div class="grid-3">
+            <div class="card">
+                <i class="fas fa-shipping-fast fa-3x" style="color:var(--accent-orange); margin-bottom: 1rem;"></i>
+                <h3>Rapiditate</h3>
+                <p>Livrăm în 24h în toate orașele mari din România, folosind flota noastră modernă.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt fa-3x" style="color:var(--accent-orange); margin-bottom: 1rem;"></i>
+                <h3>Siguranță</h3>
+                <p>Coletele tale sunt monitorizate și asigurate pe toată durata transportului.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-globe-europe fa-3x" style="color:var(--accent-orange); margin-bottom: 1rem;"></i>
+                <h3>Acoperire Națională</h3>
+                <p>Rețea extinsă de hub-uri logistice pentru a ajunge în orice colț al țării.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Despre Cargugus</h3>
+                <p>Lideri în logistică și curierat rapid.</p>
+                <p>Livrăm promisiuni, nu doar colete.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Str. Livrărilor Nr. 10, București
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> 
+                    0700 123 456
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:contact@cargugus.ro" class="footer-link">contact@cargugus.ro</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Program de lucru</h3>
+                <p>Luni - Vineri: 09:00 - 18:00</p>
+                <p>Sâmbătă: 10:00 - 14:00</p>
+                <p>Duminică: Închis</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cargugus Curierat. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prețuri - Cargugus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="img/logo.png" alt="Cargugus Logo" class="logo-img">
+        </a>
+        <ul class="nav-links">
+            <li><a href="home.html">Acasă</a></li>
+            <li><a href="servicii.html">Servicii</a></li>
+            <li><a href="preturi.html" class="active">Prețuri</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h2 class="section-title">Lista de Prețuri</h2>
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Tip Colet</th>
+                    <th>Greutate (kg)</th>
+                    <th>Preț (RON)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Plic</td>
+                    <td>0 - 1</td>
+                    <td>15 RON</td>
+                </tr>
+                <tr>
+                    <td>Colet Mic</td>
+                    <td>1 - 5</td>
+                    <td>25 RON</td>
+                </tr>
+                <tr>
+                    <td>Colet Mediu</td>
+                    <td>5 - 10</td>
+                    <td>40 RON</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="card" style="margin-top: 3rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+            <h3 style="text-align: center;">Estimare Cost</h3>
+            <div class="form-group">
+                <label>Greutate (kg):</label>
+                <input type="number" id="weightInput" min="1">
+            </div>
+            <button class="btn" style="width: 100%" onclick="calculateCost()">Calculează</button>
+            <p id="costResult" style="margin-top: 1rem; text-align: center; font-weight: bold; font-size: 1.2rem;"></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Despre Cargugus</h3>
+                <p>Lideri în logistică și curierat rapid.</p>
+                <p>Livrăm promisiuni, nu doar colete.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> 
+                    Str. Livrărilor Nr. 10, București
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> 
+                    0700 123 456
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:contact@cargugus.ro" class="footer-link">contact@cargugus.ro</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Program de lucru</h3>
+                <p>Luni - Vineri: 09:00 - 18:00</p>
+                <p>Sâmbătă: 10:00 - 14:00</p>
+                <p>Duminică: Închis</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cargugus Curierat. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
